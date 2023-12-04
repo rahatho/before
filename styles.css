@@ -9,7 +9,41 @@ body {
   color: #151412
 }
 
-main { margin: 24px }
+header {
+  grid-area: header;
+}
+
+article {
+  grid-area: content;
+}
+
+aside {
+  grid-area: aside;
+}
+
+.author-details {
+  grid-area: author;
+}
+
+.plays {
+  grid-area: plays;
+}
+
+footer {
+  grid-area: footer;
+}
+
+main { 
+  display: grid;
+  grid-template-columns: repeat(2, minmax(auto, 1fr)) 250px;
+  margin: 24px;
+  grid-template-areas: "header header header"
+  "content content author"
+  "content content aside"
+  "plays  .   aside"
+  "footer footer footer";
+}
+  
 
 img { 
   float: left; 
