@@ -33,16 +33,33 @@ footer {
   grid-area: footer;
 }
 
-main { 
-  display: grid;
-  grid-template-columns: repeat(2, minmax(auto, 1fr)) 250px;
-  margin: 24px;
-  grid-template-areas: "header header header"
-  "content content author"
-  "content content aside"
-  "plays  .   aside"
-  "footer footer footer";
+@media (min-width: 600px){
+  main { 
+    display: grid;
+    grid-template-columns: repeat(2, minmax(auto, 1fr)) 250px;
+    margin: 24px;
+    grid-template-areas: "header header header"
+    "content content author"
+    "content content aside"
+    "plays  .   aside"
+    "footer footer footer";
+  }
 }
+
+
+@media (min-width: 955px){
+    main { 
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: 
+      "header header header"
+      "content author aside"
+      "content plays aside"
+      "footer footer footer";
+    }
+}
+
+
   
 
 img { 
